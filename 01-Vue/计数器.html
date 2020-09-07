@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id= 'app'>
+    <h2>总数：{{count}}</h2>
+    <button @click="countadd">+</button>
+    <button @click="cooutdel">-</button>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            count: 0
+        },
+        methods: {
+            countadd: function (){
+                console.log("+")
+                this.count++
+            },
+            cooutdel:function (){
+                console.log("-")
+                this.count--
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>
