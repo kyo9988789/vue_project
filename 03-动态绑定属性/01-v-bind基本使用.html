@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <img v-bind:src="imageurl" alt="图片不存在">
+  <img :src="imageurl" alt="图片不存在">
+  <a v-bind:href="hrefurl" style="display: block">百度一下</a>
+  <a :href="hrefurl" style="display: block">百度一下</a>
+</div>
+
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "神",
+      imageurl: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599560200001&di=adb81b5529a5e03792dda951bf39d9bb&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fq_70%2Cc_zoom%2Cw_640%2Fupload%2F20170319%2F5a3614082f6f4959af93da04cbfd54b8_th.jpg",
+      hrefurl: "http://www.baidu.com"
+    },
+    methods: {
+
+    },
+    beforeCreate: function (){
+
+    },
+    created: function (){
+
+    }
+  })
+</script>
+
+</body>
+</html>

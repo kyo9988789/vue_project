@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2 v-pre>{{message}}</h2>  v-pre 不做解析
+  <h2 v-once>{{message}}</h2>   v-once 不做更改
+  <h2 v-html="url"></h2>        v-html 显示html
+  <h2 v-html="urls"></h2>
+  <h2 v-text="urls"></h2>       v-text 覆盖值
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "神",
+      url: "<a href='http://www.baidu.com'>百度一下</a>",
+      urls:"百度一下"
+    },
+    methods: {
+
+    },
+    beforeCreate: function (){
+
+    },
+    created: function (){
+
+    }
+  })
+</script>
+
+</body>
+</html>
