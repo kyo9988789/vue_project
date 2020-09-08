@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .cla{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="(item,index) in movies" :class="getClass(index)" @click="click(index)">{{item}}</li>
+  </ul></div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "神",
+      movies: ['电影1','电影2','电影3','电影4'],
+      currentIndex: 0
+    },
+    methods: {
+      getClass: function (index){
+        return {'cla': this.currentIndex == index}
+      },
+      click: function (index){
+          this.currentIndex = index
+      }
+    },
+    beforeCreate: function (){
+
+    },
+    created: function (){
+
+    }
+  })
+</script>
+
+</body>
+</html>
