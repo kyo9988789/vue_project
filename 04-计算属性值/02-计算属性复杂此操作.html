@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <h2>总价：{{totalPrice}}</h2>
+    <ul>
+      <li v-for="(item,index) in books">{{item}}</li>
+    </ul>
+  </div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      books: [
+        {id : 10, sname : "书一", iprice : 110},
+        {id : 11, sname : "书二", iprice : 110},
+        {id : 12, sname : "书三", iprice : 110},
+        {id : 13, sname : "书四", iprice : 110},
+        {id : 14, sname : "书五", iprice : 110}
+      ]
+    },
+    computed: {
+      totalPrice(){
+        let total = 0 ;
+        for (let book of this.books){
+          total += book.iprice;
+        }
+        return total;
+      }
+    },
+    methods: {
+
+    }
+  });
+</script>
+</body>
+</html>

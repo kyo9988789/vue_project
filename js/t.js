@@ -3,6 +3,11 @@ var app = new Vue({
         data: {
             message : "xuxiao is boy"
         },
+        methods: {
+          getMessage: function (){
+            return "message999999"
+          }
+        },
         beforeCreate: function () {
             console.group('beforeCreate 创建前状态===============》');
             console.log("%c%s", "color:red" , "el     : " + this.$el); //undefined
@@ -57,4 +62,4 @@ var app = new Vue({
             console.log("%c%s", "color:red","data   : " + this.$data);
             console.log("%c%s", "color:red","message: " + this.message)
         }
-    })
+    });
