@@ -10,6 +10,7 @@
   </style>
 </head>
 <body>
+
 <div id="app">
   <ul>
     <li v-for="(item,index) in movies" :class="getClass(index)" @click="click(index)">{{item}}</li>
